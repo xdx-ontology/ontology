@@ -1,0 +1,700 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.info/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.info/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.info/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.info/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.xdx-ontology.info/xdx/xdx_extended.owl#"
+     xml:base="http://www.xdx-ontology.info/xdx/xdx_extended.owl"
+     xmlns:rdfs="http://www.w3.info/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.info/2002/07/owl#"
+     xmlns:xsd="http://www.w3.info/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.info/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasChemical -->
+
+    <owl:ObjectProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasChemical">
+        <rdfs:range rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Chemical"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasComponent">
+        <rdfs:range rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Component"/>
+        <rdfs:domain rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Drop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasConcentration -->
+
+    <owl:ObjectProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasConcentration">
+        <rdfs:range rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Concentration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasDrop -->
+
+    <owl:ObjectProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasDrop">
+        <rdfs:range rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Drop"/>
+        <rdfs:domain rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Plate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasObservation -->
+
+    <owl:ObjectProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasObservation">
+        <rdfs:range rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasProtein -->
+
+    <owl:ObjectProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasProtein">
+        <rdfs:domain rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Component"/>
+        <rdfs:range rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Protein"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasUnitOfMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasUnitOfMeasure">
+        <rdfs:range rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#UnitOfMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#isComponentOf">
+        <rdfs:domain rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Component"/>
+        <rdfs:range rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Drop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#isObservationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#isObservationOf">
+        <rdfs:domain rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#observedState -->
+
+    <owl:ObjectProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#observedState">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Observation"/>
+        <rdfs:range rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#atColumn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#atColumn">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#atRow -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#atRow">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#atTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#atTime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#averageBigDropSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#averageBigDropSize">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#averageDropSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#averageDropSize">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#averageSmallDropSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#averageSmallDropSize">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#bubblesPresent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#bubblesPresent">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#centerDisplacement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#centerDisplacement">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#circularity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#circularity">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#displacementAngle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#displacementAngle">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#distanceFromAnEdge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#distanceFromAnEdge">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#dropSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#dropSize">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasBarcode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasBarcode">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#atTempC">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasMolecularWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasMolecularWeight">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasSequenceNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasSequenceNumber">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasSolubility -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasSolubility">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasValue"/>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#has_pH -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#has_pH">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#isLarge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#isLarge">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#isSmall -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#isSmall">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#majorAxisLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#majorAxisLength">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#minorAxisLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#minorAxisLength">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#orientation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#orientation">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#splatterPresent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#splatterPresent">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#Chemical -->
+
+    <owl:Class rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Chemical">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasMolecularWeight"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasSolubility"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasName"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#Component -->
+
+    <owl:Class rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Component">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasChemical"/>
+                <owl:someValuesFrom rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Chemical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#has_pH"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasConcentration"/>
+                <owl:someValuesFrom rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Concentration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#Concentration -->
+
+    <owl:Class rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Concentration">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasValue"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasUnitOfMeasure"/>
+                <owl:someValuesFrom rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#Drop -->
+
+    <owl:Class rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Drop">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#has_pH"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasObservation"/>
+                <owl:someValuesFrom rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Observation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#atRow"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#atColumn"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasSequenceNumber"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#Observation -->
+
+    <owl:Class rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Observation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#atTime"/>
+                <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#observedState"/>
+                <owl:someValuesFrom rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#isObservationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Drop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#Plate -->
+
+    <owl:Class rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Plate">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasDrop"/>
+                <owl:someValuesFrom rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Drop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#averageSmallDropSize"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#averageBigDropSize"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#averageDropSize"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#hasBarcode"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#atTempC"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#Protein -->
+
+    <owl:Class rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#Protein"/>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#State -->
+
+    <owl:Class rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#UnitOfMeasure -->
+
+    <owl:Class rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#UnitOfMeasure">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#M -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#M">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#UnitOfMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#bad_precipitate -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#bad_precipitate">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#clear -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#clear">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#clear_with_stuff -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#clear_with_stuff">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#crystalline -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#crystalline">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#crystals_high -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#crystals_high">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#crystals_low -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#crystals_low">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#crystals_mid -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#crystals_mid">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#good_precipitate -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#good_precipitate">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#indeterminate -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#indeterminate">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#mM -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#mM">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#UnitOfMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#mg%2Fml -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#mg%2Fml">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#UnitOfMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#null_experiment -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#null_experiment">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#phase_separation -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#phase_separation">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#precipitate -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#precipitate">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#spherulites -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#spherulites">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#v%2Fv -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#v%2Fv">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#UnitOfMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.xdx-ontology.info/xdx/xdx_extended.owl#w%2Fv -->
+
+    <owl:NamedIndividual rdf:about="http://www.xdx-ontology.info/xdx/xdx_extended.owl#w%2Fv">
+        <rdf:type rdf:resource="http://www.xdx-ontology.info/xdx/xdx_extended.owl#UnitOfMeasure"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.source.infoe.net -->
